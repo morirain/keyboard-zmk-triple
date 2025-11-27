@@ -35,7 +35,7 @@
         complete;
 
         triple {
-            physical-layout = <&triple>;
+            physical-layout = <&physical_layout0>;
             positions = <>;
         };
     };
