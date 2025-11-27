@@ -19,7 +19,7 @@
 #
 ---
 include:
-  - board: triple
+  - board: nice_nano_v2
     shield: triple
     snippet: studio-rpc-usb-uart nrf52840-nosd
     cmake-args: -DCONFIG_ZMK_STUDIO=y

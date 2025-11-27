@@ -1,1 +1,23 @@
-#include "../../../config/triple.keymap"
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+/ {
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&encoder1 &encoder2 &encoder3>;
+        triggers-per-rotation = <10>;
+    };
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &none     &kp ESC   &kp Q    &kp W    &kp DEL
+                &kp TAB   &kp A     &kp S    &kp D    &none
+                &kp LSHFT &kp Z     &kp X    &kp C    &none
+                &kp LCTRL &kp LALT  &none    &kp SPACE &none
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_AC_FORWARD C_AC_BACK &inc_dec_kp C_AC_FORWARD C_AC_BACK>;
+        };
+    };
+};
+
